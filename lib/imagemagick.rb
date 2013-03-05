@@ -10,10 +10,8 @@ module Imagemagick
   #  plugin :imagemagick
   #  recipe :imagemagick
   def imagemagick(options = {})
-    %w(
-      imagemagick
-      libmagick9-dev
-    ).each do |p|
+    imagemagick_dev_package = Facter.lsbdistrelease.to_f == 8.10 ? 'libmagick9-dev' : 'libmagickwand-dev'
+    ['imagemagick', imagemagick_dev_package].each do |p|
       package p, :ensure => :installed, :before => exec('rails_gems')
     end
   end
