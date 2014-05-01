@@ -6,7 +6,7 @@ A plugin for installing and managing imagemagick.
 
 ### Instructions
 
-- <tt>script/plugin install git://github.com/crushlovely/moonshine_imagemagick.git</tt>
+- <tt>script/plugin install git://github.com/railsmachine/moonshine_imagemagick.git</tt>
 - Include the plugin and recipe(s) in your Moonshine manifest
 
 ```
